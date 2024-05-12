@@ -1,0 +1,249 @@
+body{
+  margin: 0;
+}
+
+.title {
+    height: 60vh;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title div {
+    text-align: center;
+    margin-top: -40px;
+  }
+  
+  .title h1 {
+    font-family: "droid-serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .title p {
+    margin-top: 0px;
+  }
+
+  /* funding-cards */
+
+  .funding-cards{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 150px;
+    margin-top: 50px;
+  }
+
+  .card {
+    --main-color: #000;
+    --bg-color: #64ccc5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    width: 300px;
+    padding: 25px;
+    background: var(--bg-color);
+    border-radius: 20px;
+  }
+  
+  .card__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card___wrapper-acounts {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .card___wrapper-acounts > div:nth-child(2) {
+    position: absolute;
+    left: 25px;
+    z-index: -1;
+  }
+  
+  .card___wrapper-acounts > div:nth-child(3) {
+    position: absolute;
+    left: 50px;
+    z-index: -2;
+  }
+  
+  .card__score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: var(--main-color);
+  }
+  
+  .card__acounts {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .card__acounts svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card__menu {
+    width: 40px;
+    height: 40px;
+    background: #dafffb;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .card__title {
+    margin-top: 50px;
+    font-weight: 900;
+    font-size: 25px;
+    color: var(--main-color);
+  }
+  
+  .card__subtitle {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--main-color);
+  }
+  
+  .card__indicator {
+    margin-top: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--main-color);
+  }
+  
+  .card__progress progress {
+    width: 100%;
+    height: 4px;
+    border-radius: 100px;
+  }
+  
+  .card__progress progress::-webkit-progress-bar {
+    background-color: #00000030;
+    border-radius: 100px;
+  }
+  
+  .card__progress progress::-webkit-progress-value {
+    background-color: var(--main-color);
+    border-radius: 100px;
+  }
+
+  
+  /* funding button  */
+
+  .funding-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input {
+    min-height: 50px;
+    max-width: 150px;
+    padding: 0 1rem;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #5e4dcd;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+  }
+  
+  .button--submit {
+    min-height: 50px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #5e4dcd;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .button--submit:hover {
+    background-color: #5e5dcd;
+  }
+  
+  .input:focus, .input:focus-visible {
+    border-color: #3898EC;
+    outline: none;
+  }
+
+
+  .withdraw-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .my-button {
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .my-button:after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  
+  .my-button:hover:after {
+    animation: ripple_401 1s ease-out;
+  }
+  
+  @keyframes ripple_401 {
+    0% {
+      width: 5px;
+      height: 5px;
+      opacity: 1;
+    }
+  
+    100% {
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+    }
+  }
+
+
+  
